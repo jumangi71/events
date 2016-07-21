@@ -33,9 +33,12 @@ class Ram {
     // TODO: error handle. Add try catch
     this.s = scope;
     let _this = this;
-    scope.addEventListener(this.event, function(e) {
-      _this.dispatch(e, this);
-    }, false);
+
+    [].forEach.call(this.event.split(' '), el => {
+      scope.addEventListener(el, function (e) {
+        _this.dispatch(e, this);
+      }, false);
+    });
   }
 
   prepare(type, event, callback, selector) {
