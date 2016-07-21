@@ -1,0 +1,23 @@
+{
+  "name": "ram",
+  "version": "0.0.1",
+  "description": "Micro plugin for event delegation in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumangi71/events.git"
+  },
+  "keywords": [
+    "js",
+    "events"
+  ],
+  "author": "Koshkarov Ruslan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jumangi71/events/issues"
+  },
+  "homepage": "https://github.com/jumangi71/events#readme"
+}
