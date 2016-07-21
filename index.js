@@ -30,6 +30,7 @@ class Ram {
   }
 
   setEvent(scope) {
+    // TODO: error handle. Add try catch
     this.s = scope;
     let _this = this;
     scope.addEventListener(this.event, function(e) {
@@ -42,7 +43,7 @@ class Ram {
     this.callback = callback;
     if (selector) this.selector = selector;
     // Set listeners on all child items. Ex. for ul li
-    if (this.scope.length > 1 && this.scope.tagName !== 'FORM') {
+    if (this.scope.length >= 1 && this.scope.tagName !== 'FORM') {
       for (let x = 0; x < this.scope.length; x++) {
         if (type === 'on') this.setEvent(this.scope[x]);
         if (type === 'off') this.removeEvent(this.scope[x]);
